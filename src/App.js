@@ -18,8 +18,13 @@ function App() {
         <Navbar.Collapse className="justify-content-end">
           <Nav activeKey={window.location.pathname}>
             <LinkContainer to="/username">
-              <Nav.Link className="btn btn-outline-warning my-2 my-sm-0">
+              <Nav.Link className="btn btn-outline-warning my-2 my-sm-0 mr-4">
                 <b>Get Started</b>
+              </Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/Gamebox">
+              <Nav.Link className="btn btn-outline-primary my-2 my-sm-0">
+                <b>Get into Gamebox</b>
               </Nav.Link>
             </LinkContainer>
           </Nav>
