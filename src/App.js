@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App container py-3">
+    <div className="App ">
       <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
         <LinkContainer to="/">
           <Navbar.Brand className="font-weight-bold text-muted">
@@ -20,11 +20,6 @@ function App() {
             <LinkContainer to="/username">
               <Nav.Link className="btn btn-outline-warning my-2 my-sm-0 mr-4">
                 <b>Get Started</b>
-              </Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/Gamebox">
-              <Nav.Link className="btn btn-outline-primary my-2 my-sm-0">
-                <b>Get into Gamebox</b>
               </Nav.Link>
             </LinkContainer>
           </Nav>

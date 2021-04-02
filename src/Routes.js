@@ -10,10 +10,10 @@ export default function Routes() {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route>
+      <Route exact path = "/username">
         <Username />
       </Route>
-      <Route>
+      <Route exact path="/Gamebox">
         <GameBox />
       </Route>
     </Switch>

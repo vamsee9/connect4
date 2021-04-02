@@ -7,7 +7,8 @@ function checkWinner(boxes){
     let countGrey = 0;
 
     // check winner based on horizontal position
-
+    
+    
     for (let j = 0; j <=5; j ++) {
     	
         // loop for 4 first positions of a new row
@@ -15,7 +16,7 @@ function checkWinner(boxes){
             let i = j * 7 + k;		// position to check
  
             if(boxes[i] === boxes[i+1] && boxes[i] === boxes[i+2] && boxes[i] === boxes[i+3] && boxes[i] !== "white"){
-                if(boxes[i] === "pink") {
+                if(boxes[i] === "cyan") {
                     wintext = "player 1 wins";
                     p1score = 1;
                     winstatus = true;
@@ -40,7 +41,7 @@ function checkWinner(boxes){
         let i = j * 7 + k; // position to check
 
         if (boxes[i] === boxes[i + 7] && boxes[i] === boxes[i + 2*7] && boxes[i] === boxes[i + 3*7] && boxes[i] !== "white") {
-            if(boxes[i] === "pink"){
+            if(boxes[i] === "cyan"){
                 wintext = "player 1 wins";
                 p1score = 1;
                 winstatus = true;
@@ -63,7 +64,7 @@ function checkWinner(boxes){
         let i = j + k * 7 
 
         if (boxes[i] === boxes[i + 8] && boxes[i] === boxes[i + 2*8] && boxes[i] === boxes[i + 3*8] && boxes[i] !== "white") {
-            if(boxes[i] === "pink"){
+            if(boxes[i] === "cyan"){
                 wintext= "player 1 wins";
                 p1score = 1;
                 winstatus = true;
@@ -86,7 +87,7 @@ function checkWinner(boxes){
         let i = j + k * 7 
 
         if (boxes[i] === boxes[i + 6] && boxes[i] === boxes[i + 2*6] && boxes[i] === boxes[i + 3*6] && boxes[i] !== "white") {
-            if(boxes[i] === "pink"){
+            if(boxes[i] === "cyan"){
                 wintext = "player 1 wins";
                 p1score = 1;
                 winstatus = true;

@@ -100,17 +100,12 @@ function reducer(state, action) {
             }
         }
 
-        case "ai_is_moving":
-            return {
-                ...state,
-                aiIsMoving: true,
-            }
+      
             
         
-        case "AIFill":
+        case "Fill":
 
            
-            console.log("AI move start, action.index is ");
             // if there already someone winning, stop the game
             if (state.winningStatus) {
                 return state;
@@ -118,36 +113,23 @@ function reducer(state, action) {
 
             
             
-            const newBoxesAI = [...state.boxes];
-            let columnAI = action.index % 7;
-            let indexAI = 5 * 7 + columnAI;
-
-            let allFilledBoxAI = [...state.filledBox];
-                while (allFilledBoxAI.includes(indexAI) && indexAI >= 0 ) {
-                    indexAI -= 7;
-                }
-
-                if (indexAI < 0) {
-                    return state;
-                }
-
+           
             
-            newBoxesAI[indexAI] = "magenta";
             
 
             // function to check if there's a winning combination on every input from the player, return an array
-            const winner2 = checkWinner(newBoxesAI);
+            const winner2 = checkWinner();
             //console.log(winner[2]
 
-            console.log("AI move ending, index is", indexAI);
+           
 
             return {
                 //saving every changes done to the state by doing the spread (...)
                 ...state,
                 //setting a specific state to the new one (like setState on class)
-                boxes: newBoxesAI,
+                
                 halfBoxesTop: initialHalfBoxesTop,
-                filledBox: [...state.filledBox, indexAI],
+                filledBox: [...state.filledBox],
                 indicatorPlay: state.indicatorPlay === true ? false : true,
                 winnerText: winner2[0],
                 player1Score: state.player1Score + winner2[1],
@@ -241,11 +223,7 @@ function reducer(state, action) {
                     aiIsMoving: false,
             }
 
-        case "AIOn":
-            return {
-                ...state,
-                AI: state.AI === false ? true : false,
-            }
+        
 
         default:
             return state;

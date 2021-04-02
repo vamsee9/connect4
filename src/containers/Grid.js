@@ -32,7 +32,7 @@ const Grid = (props) => {
                 <div className="halfbox-container">
                     {halfDisk}
                 </div>
-                <div className="container">
+                <div className="boxed-container">
                     {print}
                 </div>
             </>
