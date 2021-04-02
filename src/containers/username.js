@@ -1,8 +1,8 @@
 import { Component } from "react";
 import { Redirect } from "react-router";
+import "./username.css";
 
-
-export default  class Username extends Component {
+export default class Username extends Component {
   documentData;
   constructor(props) {
     super(props);
@@ -60,7 +60,9 @@ export default  class Username extends Component {
       <div className="container py-3">
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
-            <label>Player 1</label>
+            <label>
+              <b>Player 1 (Cyan)</b>
+            </label>
             <input
               type="text"
               name="player1"
@@ -69,8 +71,10 @@ export default  class Username extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="form-group">
-            <label>player 2</label>
+          <div className="form-group lable1">
+            <label1>
+              <b>Player 2 (Magenta)</b>
+            </label1>
             <input
               type="text"
               name="player2"
@@ -95,4 +99,3 @@ export default  class Username extends Component {
     );
   }
 }
-
